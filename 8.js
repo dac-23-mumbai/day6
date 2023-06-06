@@ -39,6 +39,44 @@ function addNewMessage() {
   inputRef.value = "";
 }
 
+function addNewImage() {
+  let parentRef = document.querySelector("#parent");
+  let randomNumber = Math.floor(Math.random() * 50) + 250;
+
+  let existingValue = parentRef.innerHTML;
+  let newElement = `<div class="border-0 border-bottom">
+                      <img
+                        src="https://picsum.photos/${randomNumber}"
+                        class="w-100"
+                        style="height: 300px"
+                        alt=""
+                      />
+
+                      <h1 class="me-4">
+                        <span style="cursor: pointer" onclick="likeMe(this)"
+                          >&#128077;</span
+                        >
+                        <span>1</span>
+                        <span
+                          style="cursor: pointer"
+                          onclick="dislikeMe(this)"
+                          class="ms-4"
+                          >&#128078;</span
+                        >
+                        <span>1</span>
+
+                        <span class="ms-4" onclick="angryWithMe(this)">&#128545;</span>
+                        <span>1</span>
+
+                        <span class="ms-4" onclick="deleteMessage(this)">&#128465;</span>
+                      </h1>
+                    </div>`;
+
+  let updatedValue = newElement + existingValue;
+
+  parentRef.innerHTML = updatedValue;
+}
+
 function likeMe(p1) {
   let likeRef = p1.nextElementSibling;
 
