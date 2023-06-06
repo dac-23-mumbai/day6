@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <script src="12.js"></script>
+  </head>
+  <body>
+    <h1>Contact Us App</h1>
+    <hr />
+
+    <div class="row justify-content-center">
+      <div class="col-sm-12 col-md-6">
+        <input
+          class="form-control"
+          id="subject"
+          type="text"
+          placeholder="Enter Subject"
+        />
+        <input
+          class="form-control"
+          id="email"
+          type="text"
+          placeholder="Enter Email"
+        />
+        <textarea
+          id="query"
+          class="form-control"
+          cols="30"
+          rows="5"
+          placeholder="Enter your queries"
+        ></textarea>
+        <input type="button" value="Send" onclick="addNewQueries()" />
+      </div>
+    </div>
+
+    <div class="row justify-content-center my-3">
+      <div class="col-sm-12 col-md-6">
+        <div id="parent">
+          <div>
+            <h1>SUB1</h1>
+            <h6>user@user.com</h6>
+            <p>
+              QUERIES: Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Animi earum id quo nemo necessitatibus! Ad animi, impedit
+              temporibus officiis, sunt laudantium accusantium cum veritatis
+              facere tenetur repudiandae cumque perferendis et!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
