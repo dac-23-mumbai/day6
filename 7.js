@@ -13,11 +13,20 @@ function addNewMessage() {
     inputRef.classList.remove("border-danger");
   }
 
+  let dateRef = new Date();
+  // let formattedDate = `7-6-2023, 8:50`;
+  let formattedDate = `${dateRef.getDate()}-${
+    dateRef.getMonth() + 1
+  }-${dateRef.getFullYear()}, ${dateRef.getHours()}:${dateRef.getMinutes()}`;
+
   let existingValue = parentRef.innerHTML;
   let newElement = `<div class="border-0 border-bottom mb-2">
                         <h1>
                             ${newMessage}
                         </h1>
+
+                        <div class="fs-5 text-secondary my-2">${formattedDate}</div>
+
                         <h1 class="me-4">
                             <span style="cursor: pointer" onclick="likeMe(this)">&#128077;</span>
                             <span>1</span>
